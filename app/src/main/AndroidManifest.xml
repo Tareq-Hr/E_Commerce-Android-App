@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".Register"></activity>
-        <activity android:name=".Login">
-
+        <activity android:name=".Login"></activity>
+        <activity android:name=".PanierActivity"></activity>
         <activity android:name=".cours"></activity>
         <activity android:name=".accueil" />
         <activity android:name=".MainActivity">
