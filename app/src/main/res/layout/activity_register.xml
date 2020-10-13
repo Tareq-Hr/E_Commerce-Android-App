@@ -164,7 +164,6 @@
         android:textSize="20sp"
         android:text="Homme"/>
 
-
 </RadioGroup>
 
     <Button
