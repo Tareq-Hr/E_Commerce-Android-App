@@ -7,21 +7,7 @@
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".Login">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back_black_24dp"
-        android:padding="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/suez_one"
-        android:text="Login"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"
-        android:textStyle="bold" />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -32,22 +18,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:background="@drawable/ombre"
-        android:elevation="1sp"
         app:startIconDrawable="@drawable/ic_email_black_24dp"
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
             android:shadowColor="@color/colorAccent"
             android:ems="10"
-
             android:inputType="textEmailAddress"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,11 +40,10 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:passwordToggleEnabled="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/ic_lock_black_24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-        <EditText
-            android:elevation="1sp"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mot de passe"
@@ -72,6 +53,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/oubier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -79,7 +61,9 @@
         android:fontFamily="@font/open_sans"
         android:text="Mot de passe oublier"
         android:textColor="#040303" />
+
     <Button
+        android:id="@+id/create"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Connecter"
@@ -91,6 +75,7 @@
 
         />
     <TextView
+        android:id="@+id/liaison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

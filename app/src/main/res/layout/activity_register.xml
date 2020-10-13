@@ -8,39 +8,24 @@
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".Register">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back_black_24dp"
-        android:padding="10dp"/>
-
-    <TextView
-        android:layout_width="186dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/suez_one"
-        android:text="Inscription"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"
-        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
-        android:layout_marginTop="10dp"
+
         android:focusableInTouchMode="true"
         app:startIconDrawable="@drawable/ic_person_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nom"
             android:elevation="1dp"
-            android:ems="10"
+            android:ems="6"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -54,11 +39,11 @@
         app:startIconDrawable="@drawable/ic_person_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prenom"
-            android:ems="10"
+            android:ems="6"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -72,11 +57,11 @@
         app:startIconDrawable="@drawable/ic_email_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E-mail"
-            android:ems="10"
+            android:ems="6"
             android:inputType="textEmailAddress"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -91,11 +76,12 @@
         app:startIconDrawable="@drawable/ic_lock_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-        <EditText
-            android:layout_width="match_parent"
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
-            android:hint="Mot de passe"
             android:ems="10"
+            android:hint="Mot de passe"
             android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -109,11 +95,11 @@
         app:startIconDrawable="@drawable/ic_phone_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="+212"
-            android:ems="10"
+            android:ems="6"
             android:inputType="phone"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -128,11 +114,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="votre adrees"
-            android:ems="10"
+            android:ems="6"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -151,12 +137,12 @@
         android:text="Sexe: "
         android:textSize="20sp" />
     <RadioButton
-
-        android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="20sp"
+     android:id="@+id/sexe"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="20sp"
      android:layout_marginLeft="10dp"
-    android:text="Femme"/>
+     android:text="Femme"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,9 +154,10 @@
 </RadioGroup>
 
     <Button
+        android:id="@+id/ins"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_ronded"
         android:fontFamily="@font/abhaya_libre"
         android:text="Inscrire"
