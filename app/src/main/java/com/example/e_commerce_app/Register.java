@@ -65,7 +65,7 @@ public class Register extends AppCompatActivity {
         fStore= FirebaseFirestore.getInstance();
 
         if(fAuth.getCurrentUser()!= null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(),accueil.class));
             finish();
         }
 
@@ -163,7 +163,7 @@ public class Register extends AppCompatActivity {
                                 }
                             });
 
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),accueil.class));
                         }else{
                             Toast.makeText(Register.this,"Error!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
