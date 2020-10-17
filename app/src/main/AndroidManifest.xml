@@ -13,8 +13,8 @@
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity android:name=".cours" />
-        <activity android:name=".PanierActivity" />
-        <activity android:name=".accueil">
+        <activity android:name=".accueil" />
+        <activity android:name=".PanierActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
