@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".cours_detail">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -18,7 +23,8 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/ic_arrow_back_black_24dp"
             app:backgroundTint="#FFFFFF" />
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
+            android:id="@+id/nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -50,10 +56,11 @@
         app:cardElevation="10dp">
 
         <ImageView
+            android:id="@+id/img"
             android:layout_width="150dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
-            android:src="@drawable/python" />
+             />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -66,12 +73,11 @@
         app:cardElevation="10dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Cours programmation fonctionnelle avec
-Python"
+            android:text=""
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -85,18 +91,18 @@ Python"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="90sp"
                 android:text="Catégorie :"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/categorie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="80dp"
-                android:text="Programmation"
+                android:layout_marginTop="90sp"
+                android:text=""
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -111,21 +117,22 @@ Python"
             android:layout_gravity="right"
             app:srcCompat="@drawable/path" />
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/prix_cour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="120dp"
-            android:text="49.00 Dhs"
+            android:text=""
             android:textSize="20dp"
             android:textStyle="bold" />
         <ImageView
+            android:id="@+id/avis"
             android:layout_width="150dp"
             android:layout_height="250dp"
             android:layout_gravity="left"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/Groupe_29" />
+            android:src="@drawable/groupe_29" />
 
     </androidx.cardview.widget.CardView>
 
@@ -141,5 +148,5 @@ Python"
         android:textColor="#ffffffff"
         android:textSize="20sp"
         app:backgroundTint="@color/Bleu" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
