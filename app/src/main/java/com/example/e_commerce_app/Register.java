@@ -1,9 +1,11 @@
 package com.example.e_commerce_app;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.provider.DocumentsContract;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -51,6 +54,8 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+      getSupportActionBar().hide();
+
         setContentView(R.layout.activity_register);
         getSupportActionBar().setTitle("Inscrire");
         nom1=findViewById(R.id.nom);
@@ -61,6 +66,8 @@ public class Register extends AppCompatActivity {
         adress1=findViewById(R.id.adresse);
         ins1=findViewById(R.id.ins);
         fAuth=FirebaseAuth.getInstance();
+        TextView text = (TextView) findViewById(R.id.text);
+        //text.setShadowLayer(1, 0, 0, Color.gray);
 
         fStore= FirebaseFirestore.getInstance();
 
