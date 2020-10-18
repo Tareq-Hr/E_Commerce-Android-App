@@ -4,31 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#3EFFFFFF"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".Register">
+    tools:context=".Register"
+    >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/capriola"
+        android:gravity="center"
+        android:text="Inscription"
+        android:textColor="#1AA6DB"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nom"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
-
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_person_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
             android:hint="Nom"
-            android:elevation="1dp"
             android:ems="6"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/prenom"
         android:layout_width="match_parent"
@@ -36,11 +56,13 @@
         android:focusable="true"
         android:layout_marginTop="5dp"
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_person_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
             android:hint="Prenom"
             android:ems="6"
@@ -54,12 +76,14 @@
         android:focusable="true"
         android:layout_marginTop="5dp"
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_email_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:hint="E-mail"
             android:ems="6"
             android:inputType="textEmailAddress"
@@ -70,18 +94,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
-        android:layout_marginTop="5dp"
         android:focusableInTouchMode="true"
+        app:passwordToggleTint="#1AA6DB"
         app:passwordToggleEnabled="true"
+        app:startIconTint="#1AA6DB"
+        android:layout_marginTop="5dp"
         app:startIconDrawable="@drawable/ic_lock_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
-
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="335dp"
+            android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:hint="Mot de passe"
+            android:ems="6"
             android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -92,11 +118,13 @@
         android:focusable="true"
         android:layout_marginTop="5dp"
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_phone_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
             android:hint="+212"
             android:ems="6"
@@ -110,6 +138,7 @@
         android:focusable="true"
         android:layout_marginTop="5dp"
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_place_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
@@ -117,51 +146,54 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:hint="votre adrees"
             android:ems="6"
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
-<RadioGroup
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp"
-
-    >
-
-    <TextView
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sexe: "
-        android:textSize="20sp" />
-    <RadioButton
-     android:id="@+id/sexe"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:textSize="20sp"
-     android:layout_marginLeft="10dp"
-     android:text="Femme"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:textSize="20sp"
-        android:text="Homme"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
 
-</RadioGroup>
+        >
 
-    <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe: "
+            android:textSize="20sp" />
+        <RadioButton
+            android:id="@+id/sexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:text="Femme"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="Homme"/>
+
+
+    </RadioGroup>
+
+    <android.widget.Button
         android:id="@+id/ins"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_ronded"
         android:fontFamily="@font/abhaya_libre"
         android:text="Inscrire"
         android:textColor="#ffffffff"
-        android:textSize="22sp"
+        android:textSize="20sp"
+        android:elevation="10dp"
+        android:backgroundTint="#1AA6DB"
 
         />
 

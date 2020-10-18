@@ -6,26 +6,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+    android:background="#E2FFFFFF"
     tools:context=".Login">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/images"
+        android:src="@drawable/log"
         android:padding="30dp"
-        android:layout_gravity="center"
-        />
+
+        android:layout_gravity="center">
+
+    </ImageView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
+        android:layout_marginTop="20dp"
         android:focusableInTouchMode="true"
+        app:startIconTint="#1AA6DB"
         app:startIconDrawable="@drawable/ic_email_black_24dp"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
             android:hint="Email"
             android:shadowColor="@color/colorAccent"
@@ -35,19 +41,24 @@
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="match_parent"
+         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
+        app:passwordToggleTint="#1AA6DB"
         app:passwordToggleEnabled="true"
+        app:startIconTint="#1AA6DB"
+        android:layout_marginTop="20dp"
         app:startIconDrawable="@drawable/ic_lock_black_24dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:background="@android:drawable/dialog_holo_light_frame"
             android:layout_height="wrap_content"
             android:hint="Mot de passe"
             android:ems="10"
+
             android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,18 +71,19 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/open_sans"
         android:text="Mot de passe oublier"
-        android:textColor="#040303" />
+        android:textColor="#B45C5757" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/create"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:text="Connecter"
         android:textSize="20sp"
         android:textColor="#ffffffff"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_ronded"
-        android:elevation="1sp"
+        android:elevation="10dp"
+        android:backgroundTint="#1AA6DB"
 
         />
     <TextView
@@ -80,10 +92,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:elevation="1sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:text="Vous n'avez pas une compte? S'inscrire"
         android:fontFamily="@font/open_sans"
         android:textColor="#41B6EA"
+
 
         />
 

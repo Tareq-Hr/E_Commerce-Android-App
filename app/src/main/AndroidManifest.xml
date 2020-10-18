@@ -10,18 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".cours_detail"/>
         <activity android:name=".confirm_achat" />
         <activity android:name=".Register" />
-        <activity android:name=".Login" />
+        <activity android:name=".accueil" />
         <activity android:name=".cours" />
         <activity android:name=".PanierActivity" />
-        <activity android:name=".accueil">
+        <activity android:name=".Login"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
