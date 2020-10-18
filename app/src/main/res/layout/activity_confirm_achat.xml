@@ -9,19 +9,19 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="86dp"
+        android:layout_height="65dp"
         android:background="@drawable/gradient_blue">
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/ic_arrow_back_black_24dp"
             app:backgroundTint="#FFFFFF" />
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:textColor="#FFFF"
             android:textStyle="normal"
             android:textSize="29dp"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:text="Veuillez entrer votre email paypal:"
+        android:text="Veuillez payer avec votre email paypal:"
         android:textColor="#000000" />
     <androidx.cardview.widget.CardView
         android:layout_height="50dp"
@@ -63,18 +63,18 @@
         app:cardElevation="15dp"
         android:layout_marginTop="40dp">
 
-        <EditText
+        <TextView
+            android:id="@+id/response"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Exemple: exepmle@email.com"
+            android:hint="Paiement confirmé ou non"
             android:shadowColor="#FFFFFF" />
-        ></androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     <Button
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/confirmer"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_ronded"
@@ -82,6 +82,7 @@
         android:text="Confirmer"
         android:textColor="#ffffffff"
         android:textSize="20sp"
-        app:backgroundTint="@color/Bleu" />
+        app:backgroundTint="@color/Bleu"
+        android:onClick="confirmer"/>
 
 </LinearLayout>
