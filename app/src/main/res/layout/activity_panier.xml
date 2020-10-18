@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:background="@drawable/button_ronded"
         android:text="Continuer vos achats"
@@ -71,7 +71,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@drawable/ombre"
         android:text="TextView"
         android:textSize="18sp"
