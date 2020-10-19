@@ -32,9 +32,18 @@ public class MyAdapter extends ArrayAdapter {
         final TextView textView = (TextView) v.findViewById(R.id.textView15);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageView4);
         textView.setText(coursList.get(position).getcoursName());
-        //imageView.setImageResource(coursList.size());
+        imageView.setImageResource(coursList.get(position).getcoursImage());
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), cours.class);
+                intent.putExtra("cour_name", String.valueOf(coursList.get(position).getcoursName()));
+                getContext().startActivity(intent);
+            }
+        });
         return v;
 
     }
 
 }
+
