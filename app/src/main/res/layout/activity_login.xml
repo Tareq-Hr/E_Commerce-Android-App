@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:elevation="1sp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="Vous n'avez pas une compte? S'inscrire"
         android:fontFamily="@font/open_sans"
         android:textColor="#41B6EA"

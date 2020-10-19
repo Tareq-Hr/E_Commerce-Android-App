@@ -3,14 +3,18 @@ package com.example.e_commerce_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -26,7 +30,8 @@ import java.util.HashMap;
 
 public class cours_detail extends AppCompatActivity {
     StorageReference StorageRef;
-
+Button confirm;
+FloatingActionButton add_panier;
     String cours_nom,uri;
     TextView prix_cour,nom_cour,description,categorie;
     ImageView image;
@@ -41,6 +46,7 @@ public class cours_detail extends AppCompatActivity {
         image = findViewById(R.id.img);
         description = findViewById(R.id.description);
         categorie = findViewById(R.id.categorie);
+        confirm = findViewById(R.id.confirmer);
 
         FirebaseDatabase.getInstance().getReference().child("Programmation").child("Java").addValueEventListener(new ValueEventListener() {
             @Override
@@ -51,6 +57,7 @@ public class cours_detail extends AppCompatActivity {
                     nom_cour.setText(value.get("nom_cours").toString());
                     prix_cour.setText(value.get("prix").toString()+" Dh");
                     description.setText(value.get("description").toString());
+                    categorie.setText("Programmation");
                     Log.d("Firebase", "Value is: " +nom_cour+prix_cour+description);
 
 
@@ -79,7 +86,14 @@ public class cours_detail extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
 
+                startActivity(intent);
+            }
+        });
 
     }
 }
