@@ -54,10 +54,10 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      getSupportActionBar().hide();
+
 
         setContentView(R.layout.activity_register);
-        getSupportActionBar().setTitle("Inscrire");
+
         nom1=findViewById(R.id.nom);
         prenom1=findViewById(R.id.prenom);
         email1=findViewById(R.id.email);
