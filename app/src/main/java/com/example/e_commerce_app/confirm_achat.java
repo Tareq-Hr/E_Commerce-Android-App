@@ -18,7 +18,7 @@ import com.paypal.android.sdk.payments.PaymentConfirmation;
 import java.math.BigDecimal;
 
 public class confirm_achat extends AppCompatActivity {
-    TextView m_response;
+    TextView m_response,total;
     PayPalConfiguration m_configuration;
     String m_paypalClientId="Ad3vuRcSFEsw4Wx6PX430xzAyzyKKNKkcgOwYrq52kHgC0-e9Ozg13e61d9lNpDPCCCX2iVt7ssdnxgB";
     Intent m_service;
@@ -29,12 +29,17 @@ public class confirm_achat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_achat);
         m_response = (TextView) findViewById(R.id.response);
+        total = (TextView) findViewById(R.id.total);
         m_configuration = new PayPalConfiguration()
                 .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
                 .clientId(m_paypalClientId);
         m_service = new Intent(this, PayPalService.class);
         m_service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, m_configuration);
         startService(m_service);
+        //hada bash bash ybaan z3ma total fhad l'interf hta yji lprix bsah
+        int tot = 10;
+        total.setText(getString(R.string.currency,tot));
+
     }
      public void confirmer(View view){
          int prix = 10;
@@ -57,9 +62,9 @@ public class confirm_achat extends AppCompatActivity {
                  if (confirmation != null){
                      String state = confirmation.getProofOfPayment().getState();
                      if(state.equals("approved"))
-                         m_response.setText("l'opération de paiement est réussi");
+                         m_response.setText("l'opération de paiement est réussie !");
                      else
-                         m_response.setText("l'opération de paiement non réussi");
+                         m_response.setText("l'opération de paiement non réussie !");
 
                  }
                  else
