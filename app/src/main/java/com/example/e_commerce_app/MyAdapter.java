@@ -32,7 +32,11 @@ public class MyAdapter extends ArrayAdapter {
         final TextView textView = (TextView) v.findViewById(R.id.textView15);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageView4);
         textView.setText(coursList.get(position).getcoursName());
+
+        imageView.setImageResource(coursList.get(position).getcoursImage());
+
         //imageView.setImageResource(coursList.size());
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,3 +50,4 @@ public class MyAdapter extends ArrayAdapter {
     }
 
 }
+

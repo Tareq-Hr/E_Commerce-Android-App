@@ -18,32 +18,13 @@ public class accueil extends AppCompatActivity {
         setContentView(R.layout.activity_accueil);
         imageview = findViewById(R.id.imageView4);
         simpleList = (GridView) findViewById(R.id.grid_view);
-        //databaseReference= FirebaseDatabase.getInstance().getReference("e-commerce-7fbb3");
-        courslist.add(new item("AFRICAN FIREFINCH",R.drawable.rectangle_1));
-        courslist.add(new item("ALBATROSS",R.drawable.rectangle_1));
-        courslist.add(new item("BALD EAGLE",R.drawable.rectangle_1));
+        courslist.add(new item("Programmation",R.drawable.programmation));
+        courslist.add(new item("Intelligence Artificielle",R.drawable.intelligenceartificielle));
+        courslist.add(new item("Developpement Mobile",R.drawable.developpementmobile));
         MyAdapter myAdapter=new MyAdapter(this,R.layout.grid_view,courslist);
         simpleList.setAdapter(myAdapter);
-        //getImageData();
 
 
     }
-    /*private void getImageData() {
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot di:dataSnapshot.getChildren()){
-                    item cours=di.getValue(item.class);
-                    courslist.add(cours);
-                }
-                MyAdapter myAdapter=new MyAdapter(getApplicationContext(),R.layout.grid_view, courslist);
-                simpleList.setAdapter(myAdapter);
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }*/
 }

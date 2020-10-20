@@ -13,17 +13,13 @@
         <activity android:name=".cours_detail"/>
         <activity android:name=".confirm_achat" />
         <activity android:name=".Register" />
+
         <activity android:name=".accueil" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-    </activity>
-        <activity android:name=".cours" />
-        <activity android:name=".PanierActivity" />
-        <activity android:name=".Login">
-
         </activity>
 
         <meta-data
