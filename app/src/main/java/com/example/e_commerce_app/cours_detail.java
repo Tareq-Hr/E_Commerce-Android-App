@@ -59,11 +59,7 @@ FloatingActionButton add_panier;
                     description.setText(value.get("description").toString());
                     categorie.setText("Programmation");
                     Log.d("Firebase", "Value is: " +nom_cour+prix_cour+description);
-
-
                 }
-
-
             }
 
             @Override
