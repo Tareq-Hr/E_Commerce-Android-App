@@ -43,7 +43,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.google.firebase:firebase-firestore:21.7.1'
+    implementation 'com.android.support:appcompat-v7:29.2.0'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.14.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
-
 
 }

@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
 
                         if(task.isSuccessful()){
                             Toast.makeText(Login.this,"Login successufly",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), accueil.class));
+                            startActivity(new Intent(getApplicationContext(), confirm_achat.class));
 
 
                         }else{
