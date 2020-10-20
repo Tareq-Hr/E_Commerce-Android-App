@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">E_Commerce_App</string>
+    <string name="currency">Votre total à payer : %1$d $ </string>
 </resources>
